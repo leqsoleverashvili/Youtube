@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #0f0f0f;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      label {
+        color: white;
+        font-size: x-large;
+      }
+
+      input {
+        background-color: rgb(36, 36, 36);
+        text-decoration: none;
+        font-size: 40px;
+        border-radius: 50px;
+      }
+      #mybtn {
+        font-size: 40px;
+        background-color: rgb(36, 36, 36);
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="redirectToAnotherPage()">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="name">name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="surname">surname:</label>
+      <input type="text" id="surname" name="surname" />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+      <br /><br /><br />
+      <button type="submit" id="mybtn" onclick="redirect()">Submit</button>
+    </form>
+
+    <script>
+      function redirect() {
+        window.location.href = "index.html";
+        return false;
+      }
+    </script>
+  </body>
+</html>
